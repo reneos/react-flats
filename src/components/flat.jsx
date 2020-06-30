@@ -9,15 +9,22 @@ class Flat extends Component {
     };
   }
 
+  handleClick = () => {
+    const { long, lat } = this.props;
+    this.props.zoomTo(long, lat);
+  }
+
   render() {
     const { name, imageUrl, price, priceCurrency } = this.props;
+    const { clicked } = this.state;
+    const classList = `card${clicked ? ' clicked' : ''}`;
     const backgroundStyle = {
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3),
         rgba(0, 0, 0, 0.2)),
         url(${imageUrl})`
     };
     return (
-      <div className="card" style={backgroundStyle}>
+      <div className={classList} style={backgroundStyle} onClick={this.handleClick}>
         <div className="card-category">
           {price}
           {priceCurrency}
