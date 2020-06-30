@@ -3,16 +3,17 @@ import ReactDOM from 'react-dom';
 
 import '../assets/stylesheets/application.scss';
 
-const Hello = ({ name }) => {
-  return (
-    <div>
-      Hello,
-      {name}
-    </div>
-  );
-};
+import App from './components/app';
+import Flat from './components/flat';
 
 const root = document.getElementById('root');
 if (root) {
-  ReactDOM.render(<Hello name="World" />, root);
+  ReactDOM.render(
+    <Flat name="Bohemian and Chic in Paris"
+    imageUrl="https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat6.jpg"
+    price="90"
+    priceCurrency="EUR"
+     />,
+    root
+  );
 }
