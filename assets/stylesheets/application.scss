@@ -1,7 +1,10 @@
 // application.scss
-
-@import "cards";
+// external styling
 @import "~leaflet/dist/leaflet.css";
+
+// components
+@import "cards";
+
 
 body {
   background-color: white;
@@ -14,7 +17,6 @@ body {
 }
 
 #root > div {
-  margin-top: 20px;
   display: flex;
 }
 
@@ -25,7 +27,12 @@ body {
   top: 0 !important;
 }
 
+.leaflet-container {
+  height: 100%;
+}
+
 .flat-list {
+  margin-top: 20px;
   padding-left: 10px;
   width: 60%;
   display: flex;
