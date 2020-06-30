@@ -11,6 +11,7 @@ class FlatList extends Component {
         imageUrl={flat.imageUrl}
         price={flat.price}
         priceCurrency={flat.priceCurrency}
+        key={flat.imageUrl}
       />);
     });
     return (
